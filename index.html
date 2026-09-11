@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Numfold — calm mental math, one tap per step. Free for iPhone, iPad and Apple Watch</title>
+<meta name="description" content="Four mental-math games built from single digits: Digit Chain, Carry, Ladder and Balance. Practice, Sprint, Endless and a daily four. Free, no ads, no account, nothing leaves your device.">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0F1A">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
+<meta property="og:title" content="Numfold">
+<meta property="og:description" content="Calm mental math, one tap per step. Four games for iPhone, iPad and Apple Watch. Free, no ads, no account.">
+<meta property="og:type" content="website">
+<!-- og:image and og:url: add absolute URLs once the site has its final address -->
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-chain" viewBox="0 0 24 24"><path d="M10.5 13.5a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1.4 1.4"/><path d="M13.5 10.5a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1.4-1.4"/></symbol>
+  <symbol id="i-columns" viewBox="0 0 24 24"><path d="M9 5.5h10M9 10.5h10M4 15.5h15M9 20h10"/><path d="M5 9v3M3.5 10.5h3"/></symbol>
+  <symbol id="i-ladder" viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M8 8h8M8 13h8M8 18h8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M4.5 10.5L19.5 7"/><path d="M12 8.8V20M7 20h10"/><path d="M4.5 10.5v2.5M19.5 7v2.5"/><path d="M2 15h5M17 11.5h5"/><circle cx="12" cy="8.8" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 2M9.5 2.5h5M12 2.5V6"/></symbol>
+  <symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-1.8-2.7-3.3-4.2-5.3-4.2a4.2 4.2 0 0 0 0 8.4c2 0 3.5-1.5 5.3-4.2s3.3-4.2 5.3-4.2a4.2 4.2 0 0 1 0 8.4c-2 0-3.5-1.5-5.3-4.2z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3.5"/><path d="M3 10h18M8 2.5v4M16 2.5v4"/><path d="M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 18h.01"/></symbol>
+  <symbol id="i-watch" viewBox="0 0 24 24"><rect x="5.5" y="5.5" width="13" height="13" rx="4.5"/><path d="M8.5 5.5V2.5h7v3M8.5 18.5v3h7v-3M20.5 10v4"/></symbol>
+  <symbol id="i-ipad" viewBox="0 0 24 24"><rect x="3.5" y="2.5" width="17" height="19" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M9 12.5V5a2 2 0 0 1 4 0v6"/><path d="M13 10.5a2 2 0 0 1 4 0v1.5a2 2 0 0 1 4 0V16a6 6 0 0 1-6 6h-1.6a6 6 0 0 1-5-2.7l-2.6-3.9a1.8 1.8 0 0 1 3-2l.2.3"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5l4.5 4v-13l-4.5 4H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18.3 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12c2-4 5.5-6.5 9.5-6.5s7.5 2.5 9.5 6.5c-2 4-5.5 6.5-9.5 6.5S4.5 16 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 12.6l-8 8a1.5 1.5 0 0 1-2.1 0L3 13V3h10l7.6 7.6a1.5 1.5 0 0 1 0 2z"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-noads" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 15l10-6"/></symbol>
+  <symbol id="i-nouser" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M4 4l16 16"/></symbol>
+  <symbol id="i-device" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><rect x="9" y="10" width="6" height="5" rx="1.3"/><path d="M10.5 10V8.5a1.5 1.5 0 0 1 3 0V10"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7.5 18.5h10a3.5 3.5 0 0 0 .6-7A6 6 0 0 0 6.5 10.3a4.1 4.1 0 0 0 1 8.2z"/></symbol>
+  <symbol id="i-kid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01"/><path d="M8.5 14.5c1 1.3 2.2 2 3.5 2s2.5-.7 3.5-2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 8l8 5.5L20 8"/></symbol>
+</svg>
+
+<header class="top"><div class="wrap">
+  <img src="assets/icon.png" alt="" width="34" height="34"><span class="brand">Numfold</span>
+  <nav>
+    <a class="in-page" href="#games">Games</a>
+    <a class="in-page" href="#one-tap">One tap</a>
+    <a class="in-page" href="#modes">Modes</a>
+    <a class="in-page" href="#watch">Watch</a>
+    <a class="in-page" href="#faq">FAQ</a>
+    <a class="support" href="support/">Support</a>
+    <a class="cta" href="#" title="App Store link to be added">Get it free</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="hero">
+  <div class="digits" aria-hidden="true">4533434</div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><svg class="icon"><use href="#i-tap"/></svg> Free for iPhone, iPad and Apple Watch</span>
+      <h1>Calm mental math, <em>one tap</em> per step.</h1>
+      <p class="lead">Four small games, each built from single digits. Digit Chain, Carry, Ladder and Balance ask for one digit at a time, so you never type a whole answer. You tap the next step, and the number folds into place.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#" title="App Store link to be added">Free on the App Store</a>
+        <a class="btn" href="#games">See the four games <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="fine">
+        <li><svg class="icon"><use href="#i-check"/></svg> No ads</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> No account</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Nothing leaves your device</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Rated 4+</li>
+      </ul>
+    </div>
+    <div class="shots">
+      <img class="phone" src="assets/iphone-03-digit-chain.jpg" width="552" height="1200" alt="Numfold on iPhone: Digit Chain, level 3, the digits 6 6 1 2 1 across the top and the step 6 + 6 = ? above a keypad from 1 to 9">
+      <img class="watch" src="assets/watch-02-digit-chain.png" width="416" height="496" alt="The same Digit Chain step on Apple Watch, with a 1 to 9 keypad">
+    </div>
+  </div>
+</div>
+
+<section id="games"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">1</span> Four games</span>
+    <h2>Four games. One digit at a time.</h2>
+    <p class="sub">Each game has twelve practice levels, a Sprint, an Endless run and a daily puzzle. Start at level one; the numbers grow with you.</p>
+  </div>
+  <div class="games">
+    <article class="game amber">
+      <span class="mark" aria-hidden="true">8</span>
+      <div class="text">
+        <div class="tile"><svg class="icon"><use href="#i-chain"/></svg></div>
+        <h3>Digit Chain</h3>
+        <p class="rule">Fold a long number to one digit. Add the first two digits; if the sum passes nine, add its digits again; keep going to the end.</p>
+        <p class="levels">Keypad 1 to 9. Levels grow from 3 digits to 16.</p>
+        <p class="ex">4533434 folds to <b>8</b></p>
+      </div>
+      <img src="assets/iphone-03-digit-chain.jpg" width="552" height="1200" loading="lazy" alt="Digit Chain on iPhone: the digits 6 6 1 2 1, the current digit highlighted in amber, and 6 + 6 = ? waiting for a tap">
+    </article>
+    <article class="game teal">
+      <span class="mark" aria-hidden="true">7</span>
+      <div class="text">
+        <div class="tile"><svg class="icon"><use href="#i-columns"/></svg></div>
+        <h3>Carry</h3>
+        <p class="rule">Add the columns from the right. Tap the digit that goes in each column and keep the carry in your head.</p>
+        <p class="levels">Also take-away with borrows, and three-number sums. Up to six digits.</p>
+        <p class="ex">4787 + 2956: tap 3, 4, 7, 7 for <b>7743</b></p>
+      </div>
+      <img src="assets/iphone-09-carry-level-12.jpg" width="552" height="1200" loading="lazy" alt="Carry on iPhone, level 12: three four-digit numbers stacked for adding, the ones column highlighted, and a keypad from 0 to 9">
+    </article>
+    <article class="game violet">
+      <span class="mark" aria-hidden="true">15</span>
+      <div class="text">
+        <div class="tile"><svg class="icon"><use href="#i-ladder"/></svg></div>
+        <h3>Ladder</h3>
+        <p class="rule">A start number, then one operation at a time. Each rung folds away as you go; hold the running total in your head.</p>
+        <p class="levels">At the top, pick where you landed from four answers. Up to 14 rungs.</p>
+        <p class="ex">17, +8, ×2, −14, ÷4, +6 lands on <b>15</b></p>
+      </div>
+      <img src="assets/iphone-05-ladder.jpg" width="552" height="1200" loading="lazy" alt="Ladder on iPhone, level 3: the start number 13 fading above a large ×2 rung, with the text Rung 2 of 5, keep the total in your head">
+    </article>
+    <article class="game mint">
+      <span class="mark" aria-hidden="true">8</span>
+      <div class="text">
+        <div class="tile"><svg class="icon"><use href="#i-scale"/></svg></div>
+        <h3>Balance</h3>
+        <p class="rule">One digit is missing from the equation. Tap the digit that makes both sides equal, and the scale levels.</p>
+        <p class="levels">Later: brackets, two-digit numbers, times tables to twelve, and a 12-question marathon.</p>
+        <p class="ex">7 + ▢ = 15, so tap <b>8</b></p>
+      </div>
+      <img src="assets/iphone-06-balance.jpg" width="552" height="1200" loading="lazy" alt="Balance on iPhone, level 1: a tilted scale with 6 + ? on one side and 12 on the other, the question Which digit levels the scale?, and a keypad">
+    </article>
+  </div>
+</div></section>
+
+<section id="one-tap"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">2</span> One tap per step</span>
+    <h2>You never type the answer. You tap the next step.</h2>
+    <p class="sub">Here is Digit Chain with 4533434. Seven digits in, six taps, one digit out.</p>
+  </div>
+  <div class="panel">
+    <div class="source" aria-label="The number 4533434">
+      <span class="d first">4</span><span class="d">5</span><span class="d">3</span><span class="d">3</span><span class="d">4</span><span class="d">3</span><span class="d">4</span>
+      <span class="label">Start with the first digit and add the next one.</span>
+    </div>
+    <ol class="chain">
+      <li><div class="step"><span class="sum">4 + 5</span><span class="res">9</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></li>
+      <li><div class="step"><span class="sum">9 + 3 = 12</span><span class="fold">fold: 1 + 2</span><span class="res">3</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></li>
+      <li><div class="step"><span class="sum">3 + 3</span><span class="res">6</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></li>
+      <li><div class="step"><span class="sum">6 + 4 = 10</span><span class="fold">fold: 1 + 0</span><span class="res">1</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></li>
+      <li><div class="step"><span class="sum">1 + 3</span><span class="res">4</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></li>
+      <li class="final"><div class="step"><span class="sum">4 + 4, done</span><span class="res">8</span></div></li>
+    </ol>
+    <p class="sub" style="margin-top:22px;font-size:15px">Every circle is one tap on the 1 to 9 keypad. When a sum passes nine, fold it: add its digits and carry on. The last tap folds the whole number to one digit.</p>
+  </div>
+
+  <div class="same">
+    <div class="panel">
+      <h3 class="teal">Carry works the same way</h3>
+      <div class="demo" aria-label="4787 plus 2956 equals 7743">
+        <div class="colsum">
+          <span class="op"></span><span class="n">4</span><span class="n">7</span><span class="n">8</span><span class="n">7</span>
+          <span class="op">+</span><span class="n">2</span><span class="n">9</span><span class="n">5</span><span class="n">6</span>
+          <span class="rule"></span>
+          <span class="op"></span><span class="r">7</span><span class="r">7</span><span class="r">4</span><span class="r">3</span>
+        </div>
+      </div>
+      <p>7 + 6 = 13, tap 3. 8 + 5 + 1 = 14, tap 4. 7 + 9 + 1 = 17, tap 7. 4 + 2 + 1 = 7, tap 7. You wrote 7743 without ever seeing it written.</p>
+    </div>
+    <div class="panel">
+      <h3 class="violet">Ladder, too</h3>
+      <div class="demo">
+        <div class="rungs" aria-label="17, plus 8, times 2, minus 14, divided by 4, plus 6"><span class="start">17</span><span>+8</span><span>×2</span><span>−14</span><span>÷4</span><span>+6</span></div>
+        <div class="picks" aria-label="Four answers to pick from: 11, 15, 18, 24. The right one is 15."><span>11</span><span class="pick">15</span><span>18</span><span>24</span></div>
+      </div>
+      <p>25, 50, 36, 9, 15. The rungs fold away as you go; at the top, pick 15 from four answers.</p>
+    </div>
+    <div class="panel">
+      <h3 class="mint">And Balance</h3>
+      <div class="demo">
+        <div class="eq" aria-label="7 plus a missing digit equals 15; the missing digit is 8"><span>7</span><span class="op">+</span><span class="box">?</span><span class="op">=</span><span>15</span><svg class="icon" style="color:var(--dim)"><use href="#i-arrow"/></svg><span class="box ok">8</span></div>
+      </div>
+      <p>Which digit levels the scale? Tap 8. Later levels ask (4 + ▢) × 3 = 27, and the answer is still one digit.</p>
+    </div>
+  </div>
+
+  <div class="feel">
+    <div><svg class="icon"><use href="#i-tap"/></svg><span><b>Instant taps</b>A right answer never blocks you. The next step is already there.</span></div>
+    <div><svg class="icon"><use href="#i-sound"/></svg><span><b>A sound and a haptic</b>A right answer folds into place with one of eleven original sound effects. Turn sounds or haptics off in Settings.</span></div>
+    <div><svg class="icon"><use href="#i-eye"/></svg><span><b>Wrong? See the right digit</b>A wrong tap shows the correct digit for a moment, then moves on. No lecture.</span></div>
+    <div><svg class="icon"><use href="#i-moon"/></svg><span><b>Dark and light</b>A deep-navy look for late evenings and a light one for the kitchen table. Pick it in Settings › Look.</span></div>
+  </div>
+</div></section>
+
+<section id="modes"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">3</span> Four ways to play</span>
+    <h2>Practice slowly, sprint, or see how far you get.</h2>
+    <p class="sub">Every game has all four. Stars, best times, points and the streak are kept on your device.</p>
+  </div>
+  <div class="cards">
+    <div class="card amber"><div class="tile"><svg class="icon"><use href="#i-star"/></svg></div><h3>Practice</h3><p>Twelve levels per game, three stars each, no clock. Clear a level to unlock the next.</p></div>
+    <div class="card teal"><div class="tile"><svg class="icon"><use href="#i-timer"/></svg></div><h3>Sprint</h3><p>Sixty seconds. As many steps as you can; the last five seconds tick.</p></div>
+    <div class="card violet"><div class="tile"><svg class="icon"><use href="#i-infinity"/></svg></div><h3>Endless</h3><p>Three lives, and it gets faster. A wrong tap costs a heart. How far can you go?</p></div>
+    <div class="card mint"><div class="tile"><svg class="icon"><use href="#i-calendar"/></svg></div><h3>Today's four</h3><p>One puzzle per game each day, the same for everyone. Finish all four for a perfect-day star, and keep the daily streak alive with at least one.</p></div>
+  </div>
+  <div class="gallery">
+    <figure><img src="assets/iphone-02-hub-digit-chain.jpg" width="552" height="1200" loading="lazy" alt="The Digit Chain hub on iPhone: Sprint and Endless cards, the daily puzzle, and the practice levels with stars"><figcaption>Each game's hub: Sprint, Endless, the daily and twelve levels</figcaption></figure>
+    <figure><img src="assets/iphone-04-carry.jpg" width="552" height="1200" loading="lazy" alt="Carry on iPhone, level 3: 82 minus 64, ones column first"><figcaption>Carry, level 3: two-digit take-away</figcaption></figure>
+    <figure><img src="assets/iphone-08-sprint.jpg" width="552" height="1200" loading="lazy" alt="Balance in a Sprint on iPhone with 58 seconds left: 19 minus ? equals 13"><figcaption>Balance in a Sprint, 58 seconds left</figcaption></figure>
+    <figure><img src="assets/iphone-07-endless.jpg" width="552" height="1200" loading="lazy" alt="Digit Chain in Endless on iPhone with three hearts and the score"><figcaption>Digit Chain in Endless, three hearts</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="watch"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">4</span> Apple Watch and iPad</span>
+    <h2>All four games on your wrist. And on the big screen.</h2>
+    <p class="sub">The watch app runs on its own, with short rounds and a keypad made for a thumb. On iPad, the board gets room to breathe.</p>
+  </div>
+  <div class="devices">
+    <div>
+      <div class="watches">
+        <figure><img src="assets/watch-02-digit-chain.png" width="416" height="496" loading="lazy" alt="Digit Chain on Apple Watch: 6 + 6 = ? with a 1 to 9 keypad"><figcaption>Digit Chain</figcaption></figure>
+        <figure><img src="assets/watch-03-carry.png" width="416" height="496" loading="lazy" alt="Carry on Apple Watch: 64 plus 64, ones column highlighted"><figcaption>Carry</figcaption></figure>
+        <figure><img src="assets/watch-04-ladder.png" width="416" height="496" loading="lazy" alt="Ladder on Apple Watch: the rung +2, rung 2 of 3"><figcaption>Ladder</figcaption></figure>
+        <figure><img src="assets/watch-05-balance.png" width="416" height="496" loading="lazy" alt="Balance on Apple Watch: 6 + ? = 12 with a 0 to 9 keypad"><figcaption>Balance</figcaption></figure>
+      </div>
+      <div class="note">
+        <div><svg class="icon"><use href="#i-watch"/></svg><span><b>Short rounds on the wrist.</b> A 3-by-3 keypad for Digit Chain, 0 to 9 for Carry and Balance, four answer chips for Ladder. No iPhone needed nearby.</span></div>
+        <div><svg class="icon"><use href="#i-ipad"/></svg><span><b>iPad, at full size.</b> Same games, bigger digits, and a keypad that sits where your hand already is.</span></div>
+        <div><svg class="icon"><use href="#i-cloud"/></svg><span><b>One set of stars.</b> Turn on Sync with iCloud and your stars, best times, points and streak follow you from iPhone to iPad to watch, through your own iCloud.</span></div>
+      </div>
+    </div>
+    <div class="ipad">
+      <figure><img src="assets/ipad-carry.jpg" width="827" height="1200" loading="lazy" alt="Carry on iPad, level 3: 6480 plus 6496 with the ones column highlighted and a large keypad"><figcaption>Carry on iPad, level 3: four-digit add</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="free"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">5</span> Free, and quiet</span>
+    <h2>Free. No ads. No account. Nothing leaves your device.</h2>
+  </div>
+  <div class="promise">
+    <div><svg class="icon"><use href="#i-tag"/></svg><b>Free</b><p>Every game, every level, every mode. Nothing is held back.</p></div>
+    <div><svg class="icon"><use href="#i-noads"/></svg><b>No ads</b><p>Nothing to watch, nothing to close, nothing to skip.</p></div>
+    <div><svg class="icon"><use href="#i-nouser"/></svg><b>No account</b><p>Open it and play. There is nothing to sign up for, and no tracking.</p></div>
+    <div><svg class="icon"><use href="#i-device"/></svg><b>Nothing leaves your device</b><p>Progress is stored on your iPhone. Sync with iCloud, if you turn it on, goes through your own iCloud and nowhere else.</p></div>
+  </div>
+  <p class="promise-note">The App Store privacy label says “Data Not Collected”, because nothing is. Made for adults and kids alike, rated 4+. Requires iOS 26 or watchOS 26. <a href="privacy/">Read the privacy policy</a>.</p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="head">
+    <span class="kicker"><span class="n">6</span> Questions</span>
+    <h2>The things people ask first.</h2>
+  </div>
+  <div class="faq">
+    <details><summary>Is it really free? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes. Every game, every level and every mode, with no ads and no account. Download it and play.</p></details>
+    <details><summary>Why “Numfold”? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Because every game folds a number down. A long number folds to one digit, columns fold into a sum, a ladder of operations folds into where you landed, and a scale folds level. Num, fold.</p></details>
+    <details><summary>How does Today's four work? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Each day the app builds one puzzle per game from the date, so everyone gets the same four. Finish all four for a perfect-day star. Play at least one and your daily streak grows; skip a whole day and it starts again from one.</p></details>
+    <details><summary>Can kids play? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>Yes. It is rated 4+, with no accounts, no ads and no chat. Level one of every game uses small numbers, and the levels grow gently: a three-digit chain, a two-digit sum, three rungs, one missing digit.</p></details>
+    <details><summary>Does the watch need my iPhone nearby? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>No. The watch app runs on its own. With Sync with iCloud turned on, rounds on the watch count toward the same stars and streak as on your iPhone.</p></details>
+    <details><summary>What do I need? <svg class="icon"><use href="#i-chevron"/></svg></summary><p>iOS 26 on iPhone or iPad. watchOS 26 on Apple Watch. More answers on the <a href="support/">support page</a>.</p></details>
+  </div>
+</div></section>
+
+<section class="get" id="get"><div class="wrap">
+  <img src="assets/icon.png" width="96" height="96" alt="Numfold app icon: a rounded 9 inside an amber ring">
+  <h2>Fold a number today.</h2>
+  <p class="sub">Free. No ads, no account. iPhone, iPad and Apple Watch.</p>
+  <a class="btn primary" href="#" title="App Store link to be added">Free on the App Store</a>
+  <ul class="fine">
+    <li><svg class="icon"><use href="#i-check"/></svg> Requires iOS 26 or watchOS 26</li>
+    <li><svg class="icon"><use href="#i-check"/></svg> Rated 4+</li>
+  </ul>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Numfold · Made by <span class="placeholder">Enea Jahollari</span></span>
+  <nav>
+    <a href="support/">Support</a>
+    <a href="privacy/">Privacy</a>
+    <a href="mailto:support@glanceslots.com"><svg class="icon"><use href="#i-mail"/></svg>Email</a>
+  </nav>
+</div></footer>
+</body>
+</html>
