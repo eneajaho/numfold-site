@@ -1,0 +1,3 @@
+# app-ads.txt for Numfold. Replace pub-0000000000000000 with the AdMob publisher id (AdMob › Settings › Account information)
+# and keep this file at https://numfold.app/app-ads.txt (the App Store "marketing URL" domain).
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

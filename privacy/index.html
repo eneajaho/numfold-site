@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
 <title>Numfold — Privacy Policy</title>
-<meta name="description" content="Numfold collects nothing. No account, no analytics, no third-party SDKs, no ads. Progress stays on your device, with optional sync through your own iCloud.">
+<meta name="description" content="Numfold has no account and no analytics. Progress stays on your device, with optional sync through your own iCloud. The one rewarded ad uses Google's SDK, non-personalised and child-safe; this page says exactly what that means.">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0F1A">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
 <link rel="icon" href="../assets/icon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/nunito-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -21,42 +19,60 @@
 </svg>
 <header class="top"><div class="wrap">
   <a href="../"><img src="../assets/icon.png" alt="" width="34" height="34"></a><a class="brand" href="../">Numfold</a>
-  <nav><a href="../">Home</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a class="cta" href="#" title="App Store link to be added">Get it free</a></nav>
+  <nav><a href="../">Home</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a class="cta" href="#" title="App Store link to be added">Get the app</a></nav>
 </div></header>
 <main><article class="doc">
   <h1>Privacy Policy</h1>
   <p class="muted">Numfold for iPhone, iPad and Apple Watch · Effective 2026-09-11</p>
 
-  <p><strong>Short version: Numfold collects nothing.</strong> There is no account, no server of ours, no analytics, no third-party SDKs and no advertising. The App Store privacy label says “Data Not Collected”, and this page explains why that is true.</p>
+  <p><strong>Short version.</strong> Numfold has no account, no analytics and no server of ours. Your progress stays on your device, with optional sync through your own iCloud and optional Game Center leaderboards, both run by Apple. The one thing that involves a third party is the single rewarded video ad you can choose to watch when you are out of hearts: it is served by Google's advertising SDK, non-personalised, with child-safe treatment, and the app never asks for tracking permission. Buying Numfold Complete removes the ad, and the SDK is not started after that. Everything below spells this out.</p>
 
   <h2>What the app stores</h2>
-  <p>Your progress: stars and best times per level, Sprint and Endless points, which of today's four puzzles are done, the daily streak, and your settings (sounds, haptics, look, keypad size, game options). It is stored on the device you play on, in the app's own storage. Nobody else can read it, and it is deleted when you delete the app.</p>
+  <p>Your progress: stars and best times per level, Sprint and Endless points, which of today's six puzzles are done, the daily streak, today's hearts, your play statistics (accuracy and seconds per step by game, by digit pair and by day, for the <em>Your numbers</em> page) and your settings (sounds, haptics, look, keypad size, teacher mode, game options). It is stored on the device you play on, in the app's own storage, and a copy is shared with the app's widgets on the same device. Nobody else can read it, and it is deleted when you delete the app.</p>
 
   <h2>Sync with iCloud (optional)</h2>
-  <p>If you turn on <em>Sync with iCloud</em> in Settings, a copy of that progress is kept in your own iCloud account through Apple's iCloud Key-Value storage, so it appears on your other iPhones, your iPad and your Apple Watch. It travels between your devices and Apple's iCloud only. We have no access to it and no way to see it. Turn the switch off at any time; the copy on each device stays. Apple's <a href="https://www.apple.com/legal/privacy/">privacy policy</a> covers iCloud itself.</p>
+  <p>With <em>Sync with iCloud</em> on in Settings, a copy of that progress is kept in your own iCloud account through Apple's iCloud Key-Value storage, so it appears on your other iPhones, your iPad and your Apple Watch. It travels between your devices and Apple's iCloud only. We have no access to it and no way to see it. The switch is on unless you turn it off; turn it off at any time and the copy on each device stays. Apple's <a href="https://www.apple.com/legal/privacy/">privacy policy</a> covers iCloud itself.</p>
+
+  <h2>Game Center (optional)</h2>
+  <p>If you are signed in to Game Center on your device, Numfold sends your time on each daily puzzle to that game's daily and weekly leaderboards, and your Sprint score to its Sprint leaderboard, so you can compare yourself with other players. Those leaderboards are run by Apple under your Game Center profile and Apple's privacy policy. If you are not signed in, nothing is sent and the leaderboards simply do not appear. Sign out or manage your profile in the iOS Settings app under Game Center.</p>
+
+  <h2>The rewarded ad</h2>
+  <p>Numfold shows one kind of ad: a short rewarded video that you can choose to watch when you have used up the day's five hearts, in exchange for five more. There are no banners, no ads between rounds, and no ads on Apple Watch or in the widgets. The ad is shown only when you tap “Watch an ad”.</p>
+  <p>To do this the iPhone and iPad app includes the <strong>Google Mobile Ads SDK</strong> (AdMob) and the <strong>Google User Messaging Platform</strong>, used only to load and show that ad and to ask for your consent where the law requires it. This is how they are configured:</p>
+  <ul>
+    <li>Ads are <strong>non-personalised</strong>: the SDK is told to turn ad personalisation off for every request.</li>
+    <li>Every request is given <strong>child-safe (age-restricted) treatment</strong>, for every player whatever their age, and the maximum ad content rating is set to “general audiences”. With this treatment Google does not use the advertising identifier for personalisation and does not do remarketing.</li>
+    <li>The app <strong>never asks for tracking permission</strong> (App Tracking Transparency) and does not track you across other companies' apps or websites.</li>
+    <li>In the EEA and the UK, a consent form from Google's User Messaging Platform appears before any ad is requested, tagged as under the age of consent. You can change your answer later in <em>Settings › Ad choices</em>, which appears in the app where consent is required.</li>
+    <li>The SDK is started only when you do not own Numfold Complete, and only after the consent step above.</li>
+  </ul>
+  <p>Google's SDK may collect, for the purpose of serving and measuring that ad, the categories listed in its own privacy manifest: device identifiers used for advertising, a coarse location estimated from your IP address, ad interaction data (which ads were shown and how you interacted with them) and diagnostics such as crash and performance data. Google processes this under its <a href="https://policies.google.com/privacy">privacy policy</a>; see also <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>. We do not receive any of it, and we cannot see who watched an ad.</p>
+  <p>If an ad is ever inappropriate, report it with <em>Settings › Report an ad</em> or with the link shown right after an ad; both open an email to us.</p>
+
+  <h2>Numfold Complete</h2>
+  <p>Numfold Complete is a one-time purchase made through Apple's App Store. Apple handles the payment; we never see your payment details, and the app only checks your purchase with the App Store on your device. Once you own Numfold Complete, the app no longer shows the ad, and from the next launch it does not start Google's advertising SDK at all. Family Sharing is supported through Apple.</p>
 
   <h2>What the app does not do</h2>
   <ul>
-    <li>No accounts. You never sign in to anything.</li>
-    <li>No analytics, crash reporting or usage statistics of any kind.</li>
-    <li>No third-party SDKs, libraries or services inside the app.</li>
-    <li>No advertising, and no advertising identifiers.</li>
-    <li>No tracking across apps or websites.</li>
+    <li>No accounts. You never sign in to anything of ours.</li>
+    <li>No analytics, crash reporting or usage statistics of ours. The only third-party code is Google's advertising SDK described above, and it is not used once you own Numfold Complete.</li>
+    <li>No tracking permission prompt, and no tracking across apps or websites.</li>
     <li>No permissions requested: not notifications, location, contacts, photos, camera or microphone.</li>
-    <li>No connection to any server of ours. The only network activity is Apple's iCloud sync, and only if you turn it on.</li>
+    <li>No server of ours. The app's network activity is Apple's iCloud sync (if on), Apple's Game Center (if signed in), the App Store for the purchase, and Google's ad request when you ask for an ad.</li>
+    <li>No chat and no user-generated content. A challenge link only carries the game, level and puzzle number, never anything about you.</li>
   </ul>
 
-  <h2>Children</h2>
-  <p>Numfold is rated 4+ and is made for adults and children alike. It has no accounts, no ads, no chat, no links out of the app and no tracking, and it collects no data from anyone, including children.</p>
+  <h2>All ages</h2>
+  <p>Numfold is rated 4+ and made for all ages. It is not directed primarily at younger players, but younger players may use it, so the ad is given child-safe treatment for everyone rather than trying to guess anyone's age, and no player is ever asked to sign up or give tracking permission.</p>
 
   <h2>App Store privacy label</h2>
-  <p>The label for Numfold on the App Store is <strong>Data Not Collected</strong>. The app's privacy manifest, which Apple checks, declares no tracking and no collected data types.</p>
+  <p>Because of the ad SDK, the App Store label for Numfold lists the data categories Google's SDK declares for serving that ad: Identifiers (a device identifier used for advertising), Location (coarse location, from the IP address), Usage Data (advertising data and product interaction) and Diagnostics (crash and performance data), for the purpose of third-party advertising, and <strong>Tracking: No</strong>. Nothing else is listed, because the app itself collects nothing. The app's own privacy manifest declares no tracking and no data collection of its own; Google's SDK carries its own manifest, and Apple combines the two.</p>
 
   <h2>This website</h2>
-  <p>Static pages. No cookies, no analytics and no third-party scripts. The typeface is loaded from Google Fonts, so your browser requests it from Google's servers when a page loads; that request is covered by Google's privacy policy, and we receive nothing from it.</p>
+  <p>Static pages. No cookies, no analytics and no third-party scripts. The typeface is served from this site itself, so loading a page makes no request to Google Fonts or any other third party.</p>
 
   <h2>Changes</h2>
-  <p>If this policy ever changes, the new version will be published here with a new effective date, and the app's privacy label will be updated to match.</p>
+  <p>If this policy changes, the new version will be published here with a new effective date, and the app's privacy label will be updated to match.</p>
 
   <h2>Contact</h2>
   <p>Numfold is made by Enea Jahollari. Questions about privacy: <a href="mailto:support@glanceslots.com">support@glanceslots.com</a>.</p>
