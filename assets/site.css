@@ -37,7 +37,7 @@ header.top .wrap { display: flex; align-items: center; gap: 10px; height: 64px; 
 header.top img { width: 34px; height: 34px; border-radius: 9px; }
 header.top .brand { font-weight: 900; font-size: 19px; color: var(--text); }
 header.top nav { margin-left: auto; display: flex; gap: 2px; align-items: center; }
-header.top nav a { color: var(--muted); font-size: 14.5px; font-weight: 700; padding: 8px 11px; border-radius: 999px; }
+header.top nav a { color: var(--muted); font-size: 14.5px; font-weight: 700; padding: 8px 11px; border-radius: 999px; white-space: nowrap; }
 header.top nav a:hover { color: var(--text); background: var(--surface); text-decoration: none; }
 header.top nav a.cta { color: var(--on-accent); background: var(--amber); margin-left: 6px; padding: 9px 15px; }
 header.top nav a.cta:hover { background: var(--amber); filter: brightness(1.06); }
@@ -241,7 +241,10 @@ article.doc th { color: var(--muted); font-weight: 800; font-size: 13px; text-tr
   .chain .arrow { width: 18px; margin: 22px 0 0; }
   .feel, .promise { grid-template-columns: minmax(0, 1fr); }
   .watches { gap: 14px; }
-  header.top nav a.support { display: none; }
+  header.top nav a:not(.cta) { display: none; }
+  .source { gap: 4px; }
+  .source .d { width: 40px; height: 48px; font-size: 24px; border-radius: 12px; }
+  .source .label { margin: 6px 0 0; }
   .fine { gap: 6px 14px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, summary .icon { transition: none; } }
